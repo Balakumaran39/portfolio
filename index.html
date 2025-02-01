@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="image.png">
+
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">My Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero fade-in">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi, I'm Balakumaran B</h1>
+        <p>
+            And I'm a <span style="color: rgb(217, 255, 0); font-weight: bold;">Fullstack Developer</span>
+		    As a Python Full Stack Developer fresher, proficient in
+			Python, MySQL, and Django for robust back-end
+			development, with expertise in front-end technologies like
+			HTML, CSS, and JavaScript. Additionally, well-versed in
+			creating dynamic user interfaces using Bootstrap,
+			showcasing a comprehensive skill set for end-to-end web
+			application development.
+        </p>
+        <a href="https://plum-silvia-97.tiiny.site" class="btn bounce">Download Cv</a>
+      </div>
+      <div class="hero-photo">
+        <img src="image.png" alt="Your Photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section slide-in-left">
+    <h2>About Me</h2>
+    <p>
+        <span style="color: rgb(56, 56, 2); font-size:xx-large;">Python</span> <span style="color: rgb(3, 20, 95); font-size:xx-large;">fullstack Developer</span><br>
+        as a Python full Stack Developer fresher, proficient in Python, MYSQL, Django, for roubust back-end development, with expertise in front-end technologies like HTML, CSS, JavaScript and Bootstrap. Additionally, well-versed in creating dynamic user interfaces using JQuery, showing a comprehensive skill set for end-to-end web application development.</div>
+
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section slide-in-right">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">JQuery</div>
+      <div class="skill">Bootstrap</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Django</div>
+      <div class="skill">Git & GitHub</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section slide-in-left">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A responsive portfolio built with HTML, CSS, and JavaScript. user-friendly websites</p>
+      </div>
+      <div class="project">
+        <h3>Snake Game</h3>
+        <p>I will be using Pygame to create this snake game.
+            Snake Game is one of the most popular arcade games
+            of all time.</p>
+      </div>
+      <div class="project">
+        <h3>Adaptive Mail a Fiexible Email</h3>
+        <p>Adaptive Mail app is a sample project that demonstrates
+            how to use the Android Compose UI toolkit to build a
+            conversational UI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="balakumaran26032003@gmail.com">Balakumaran26032003@gmail.com</a></p>
+    <p>Phone: 9361478139</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/balakumaran-b-b6aa2a2a4/" target="_blank">linkedin.com/in/Balakumaran</a></p>
+  </section>
+
+  <footer>
+    <p>© 2024 Balakumaran. All Rights Reserved.</p>
+  </footer>
+  <button id="backToTop" title="Go to top">↑</button>
+
+  <script>
+    // Add animation on scroll
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible', 'animated');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    sections.forEach(section => observer.observe(section));
+
+    const backToTopButton = document.getElementById("backToTop");
+
+// Show the button when the user scrolls down 100px
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    backToTopButton.style.display = "block";
+  } else {
+    backToTopButton.style.display = "none";
+  }
+};
+
+// Scroll to the top when the button is clicked
+backToTopButton.onclick = function() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+  </script>
+</body>
+</html>
